@@ -3,6 +3,7 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 def load_and_clean_data(file_path):
     """
@@ -146,5 +147,23 @@ def analyze_marketing_data(file_path):
     return df
 
 if __name__ == "__main__":
-    # Replace 'your_file_path.csv' with the actual path to your marketing dataset
-    df = analyze_marketing_data('data/Marketing_Design_Dataset.csv')
+    # Clear the screen at the start
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construct the path to the CSV file
+    file_path = os.path.join(script_dir, 'data/Marketing_Design_Dataset.csv')
+    
+    try:
+        df = analyze_marketing_data(file_path)
+        print("\nAnalysis complete!")
+    except FileNotFoundError:
+        print(f"\nError: Could not find 'Marketing_Design_Dataset.csv' in {script_dir}")
+        print("Please make sure the CSV file is in the same folder as this script.")
+    except Exception as e:
+        print(f"\nAn error occurred: {str(e)}")
+    
+    # Keep the window open
+    input("\nPress Enter to exit...")

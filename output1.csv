@@ -1,0 +1,99 @@
+Loading and analyzing marketing data...
+
+=== Dataset Overview ===
+Total number of campaigns: 20000
+Memory usage: 1562.63 KB
+
+=== Numerical Variables Statistics ===
+                 Campaign_Budget  Ad_Click_Rate  ...  Email_Open_Rate  Customer_Retention_Rate
+Count                   20000.00       20000.00  ...         20000.00                 20000.00
+Mean                    50030.37           5.22  ...            45.01                    74.86
+Median                  50042.03           5.22  ...            44.96                    74.72
+Std Dev                 20114.33           2.73  ...            20.13                    14.40
+Min                    -36028.19           0.50  ...            10.00                    50.00
+Max                    135865.52          10.00  ...            80.00                   100.00
+25th Percentile         36512.39           2.84  ...            27.44                    62.37
+75th Percentile         63489.73           7.56  ...            62.58                    87.34
+Skewness                   -0.00           0.00  ...             0.00                     0.02
+Kurtosis                    0.02          -1.20  ...            -1.20                    -1.19
+
+[10 rows x 6 columns]
+
+
+=== Categorical Variables Distribution ===
+
+Platform Distribution:
+            Count  Percentage  Cumulative_%
+Platform
+Twitter      4088       20.44         20.44
+LinkedIn     4005       20.02         40.46
+Facebook     3995       19.98         60.44
+Google Ads   3985       19.92         80.36
+Instagram    3927       19.64        100.00
+
+Campaign_Type Distribution:
+                   Count  Percentage  Cumulative_%
+Campaign_Type
+Brand Awareness     5067       25.34         25.34
+Lead Generation     5035       25.17         50.51
+Content Marketing   4961       24.80         75.31
+Sales Promotion     4937       24.68         99.99
+
+Target_Audience Distribution:
+                 Count  Percentage  Cumulative_%
+Target_Audience
+Gen Z             5115       25.58         25.58
+Boomers           5036       25.18         50.76
+Gen X             4925       24.62         75.38
+Millennials       4924       24.62        100.00
+
+Region Distribution:
+               Count  Percentage  Cumulative_%
+Region
+Africa          4111       20.56         20.56
+Europe          4063       20.32         40.88
+North America   3973       19.86         60.74
+Asia            3931       19.66         80.40
+South America   3922       19.61        100.01
+
+
+=== Correlation Matrix ===
+                         Campaign_Budget  Ad_Click_Rate  ...  Email_Open_Rate  Customer_Retention_Rate
+Campaign_Budget                    1.000         -0.002  ...            0.006                    0.000
+Ad_Click_Rate                     -0.002          1.000  ...            0.011                   -0.001
+Conversion_Rate                    0.002          0.015  ...            0.004                   -0.005
+Social_Media_Followers             0.009         -0.014  ...           -0.005                    0.011
+Email_Open_Rate                    0.006          0.011  ...            1.000                   -0.002
+Customer_Retention_Rate            0.000         -0.001  ...           -0.002                    1.000
+
+[6 rows x 6 columns]
+
+
+=== Campaign Performance Metrics ===
+
+Average Metrics by Campaign Type:
+                   Campaign_Budget  Ad_Click_Rate  Conversion_Rate  Email_Open_Rate  Customer_Retention_Rate
+Campaign_Type
+Brand Awareness           50234.16           5.26             5.27            45.15                    74.95
+Content Marketing         50124.55           5.16             5.32            44.86                    75.07
+Lead Generation           50024.44           5.18             5.23            45.04                    74.76
+Sales Promotion           49732.63           5.28             5.29            45.01                    74.64
+
+Average Metrics by Platform:
+            Campaign_Budget  Ad_Click_Rate  Conversion_Rate  Email_Open_Rate  Customer_Retention_Rate
+Platform
+Facebook           50411.36           5.28             5.30            44.55                    75.26
+Google Ads         50200.86           5.19             5.34            45.31                    75.25
+Instagram          49670.19           5.13             5.31            44.85                    74.78
+LinkedIn           49962.14           5.22             5.24            45.15                    74.51
+Twitter            49904.70           5.28             5.20            45.20                    74.51
+
+=== Additional Insights ===
+Most expensive campaign: $135,865.52
+Average campaign budget: $50,030.37
+Most successful conversion rate: 10.00%
+Average conversion rate: 5.28%
+
+Analysis complete!
+
+Press Enter to exit...
